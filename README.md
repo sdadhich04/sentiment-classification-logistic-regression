@@ -10,6 +10,12 @@ Built from coursework for **CSE 416 (Introduction to Machine Learning)**,
 University of Washington. See [Results](#results) for the actual numbers
 this notebook produced.
 
+> **⚠️ This notebook will not run out of the box.** It depends on
+> `food_products.csv`, a course-provided dataset not included in this repo
+> (not redistributed — see Known Limitations). Cloning and running
+> immediately will fail on the first data-loading cell with
+> `FileNotFoundError` until you supply that file yourself.
+
 ## What this does
 
 1. Filters out neutral (rating = 3) reviews, keeping only clearly positive
@@ -67,7 +73,13 @@ TP/FP/FN/TN computation, and the full L2 regularization sweep loop
 
 ## Running this code
 
-Requires Python with `pandas`, `numpy`, `scikit-learn`, `matplotlib`, and
-`seaborn`. Open `sentiment_classification_logistic_regression.ipynb` in
-Jupyter, supply `food_products.csv` in the same directory, and run all
-cells top to bottom.
+```
+pip install -r requirements.txt
+```
+
+Then supply `food_products.csv` in the same directory (see the limitation
+above), open `sentiment_classification_logistic_regression.ipynb` in
+Jupyter, and run all cells top to bottom. Dependency versions in
+`requirements.txt` are unpinned — the exact versions originally used
+weren't captured, so this lists package names only, not a locked
+environment.
